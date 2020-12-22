@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+    
+    HTML{
+        background-color:blue;
+    }
+    *,
+    *:before,
+    *:after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    /* .button */
+
+    .button {
+        display: inline-block;
+        position: relative;
+        margin: 1em;
+        padding: 0.67em;
+        border: 2px solid #FFF;
+        overflow: hidden;
+        text-decoration: none;
+        font-size: 2em;
+        outline: none;
+        color: #FFF;
+        background: transparent;
+        font-family: 'raleway', sans-serif;
+    }
+
+    .button span {
+        -webkit-transition: 0.6s;
+        -moz-transition: 0.6s;
+        -o-transition: 0.6s;
+        transition: 0.6s;
+        -webkit-transition-delay: 0.2s;
+        -moz-transition-delay: 0.2s;
+        -o-transition-delay: 0.2s;
+        transition-delay: 0.2s;
+    }
+
+    .button:before,
+    .button:after {
+        content: '';
+        position: absolute;
+        top: 0.67em;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        -webkit-transition: .4s,opacity .6s;
+        -moz-transition: .4s,opacity .6s;
+        -o-transition: .4s,opacity .6s;
+        transition: .4s,opacity .6s;
+    }
+
+    /* :before */
+
+    .button:before {
+        content: attr(data-hover);
+        -webkit-transform: translate(-150%,0);
+        -moz-transform: translate(-150%,0);
+        -ms-transform: translate(-150%,0);
+        -o-transform: translate(-150%,0);
+        transform: translate(-150%,0);
+    }
+
+    /* :after */
+
+    .button:after {
+        content: attr(data-active);
+        -webkit-transform: translate(150%,0);
+        -moz-transform: translate(150%,0);
+        -ms-transform: translate(150%,0);
+        -o-transform: translate(150%,0);
+        transform: translate(150%,0);
+    }
+
+    /* Span on :hover and :active */
+
+    .button:hover span,
+    .button:active span {
+        opacity: 0;
+        -webkit-transform: scale(0.3);
+        -moz-transform: scale(0.3);
+        -ms-transform: scale(0.3);
+        -o-transform: scale(0.3);
+        transform: scale(0.3);
+    }
+
+    /*  
+        We show :before pseudo-element on :hover 
+        and :after pseudo-element on :active 
+    */
+
+    .button:hover:before,
+    .button:active:after {
+        opacity: 1;
+        -webkit-transform: translate(0,0);
+        -moz-transform: translate(0,0);
+        -ms-transform: translate(0,0);
+        -o-transform: translate(0,0);
+        transform: translate(0,0);
+        -webkit-transition-delay: .4s;
+        -moz-transition-delay: .4s;
+        -o-transition-delay: .4s;
+        transition-delay: .4s;
+    }
+
+    /* 
+    We hide :before pseudo-element on :active
+    */
+
+    .button:active:before {
+        -webkit-transform: translate(-150%,0);
+        -moz-transform: translate(-150%,0);
+        -ms-transform: translate(-150%,0);
+        -o-transform: translate(-150%,0);
+        transform: translate(-150%,0);
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        -o-transition-delay: 0s;
+        transition-delay: 0s;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Barlow|Tomorrow:400,700&display=swap");
+
+    :root {
+    --yellow-color: #fcee09; 
+    --red-color: #ff003c;
+    --black-color: #050a0e;
+    --blue-color: #00f0ff;
+    }
+
+.GFG {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  outline: none;
+  background-color: var(--yellow-color);
+  color: var(--black-color);
+  cursor: pointer;
+  padding: 20px 25px;
+  position: relative;
+  font-family: Tomorrow, sans-serif;
+  font-size: .85rem;
+  text-transform: uppercase;
+}
+.GFG::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  bottom: -14px;
+  left: -13px;
+  background-color: var(--yellow-color);
+  border-top: 2px solid var(--black-color);
+  transform: rotate(45deg);
+  
+}
+
+
+</style> 
+
+<center>
+    <h1>Join These</h1>  
+<h1><button class="GFG" 
+    onclick="window.location.href = 'https://www.youtube.com/channel/UCe-wzl-JXCqGFgGel5_Y_sg?sub_confirmation=1';"> 
+        Aryatac YT 
+    </button> </h1>
+
+   <h1> <button class="GFG" 
+    onclick="window.location.target=_blank.href = 'https://discord.gg/DDvtP7fScc';"> 
+        Discord Server
+        </button>   </h1>
+
+<a target="_blank" href="https://discord.gg/FmxBCfJyaE">ㅤㅤㅤ</a>
+
+
+</center>
+
+
+</html>
